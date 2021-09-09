@@ -8,35 +8,10 @@
     <meta name="generator" content="Hugo 0.83.1">
     <title>GeolocationApiAssignment</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-            crossorigin="anonymous"></script>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png"
-          sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-          type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png">
-    <link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg"
-          color="#7952b3">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#7952b3">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -48,7 +23,6 @@
         body {
             height: 100%;
         }
-
 
         .container {
             height: 100%;
@@ -62,16 +36,27 @@
             color: #000000;
         }
 
-        .feature{
+        .feature {
             margin: 0 5vw;
         }
+
+        body {
+            font-size: .875rem;
+        }
+
+
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                top: 5rem;
+            }
+        }
+
 
 
     </style>
 
 
-    <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
 <body>
 
@@ -80,7 +65,7 @@
         <a href="https://documenter.getpostman.com/view/17432030/U16jLQMy">
             <div class="feature col">
                 <img alt=""
-                     src="https://res.cloudinary.com/postman/image/upload/t_team_logo/v1/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8"
+                     src="/static/postman.png"
                      width="128"
                      height="128">
                 <h2>Documentation</h2>
@@ -92,7 +77,7 @@
         <a href="https://github.com/DorianKucharski/BigData_VehicleTraffic">
             <div class="feature col">
                 <img alt=""
-                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+                     src="/static/github.png"
                      width="128" height="128">
                 <h2>Repository</h2>
             </div>
@@ -101,7 +86,7 @@
         <a href="/register">
             <div class="feature col">
                 <img alt=""
-                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX////2ixz2hAD1ggD2hgD70rb2jyn1gAD2ihb2hwj2iBH5uIP3ljv4pVv84tD2iA396Nf/+vb6xZv5u4z4rHD+8+j//Pj2igL70a/83cT5s374q2n+9u372L7+7uL95tT3n1T3m0b5snf7zKj4qWX3lDT3m0X6wpf3nk75u4n7zar3lDj2jyH2ki35sXr4qGB3pzofAAASE0lEQVR4nNVdi3bqOg4F2zQmPMKjpFAgUF6FHhj+/+8mgch23paTQO5eM2vdntLgHdmSLMlyq/UyjH2sPM9bBf/xuq+tHa632E+X29OtzQihlD7+T1j7dtoup/uF5757gCUwHnUu2y+L+Hwcm3PeVuH/bDs+Z2J9bS+d0X9PprNO758//q7dLobd9d9Bv7eevXvQ2pjNP68W6fJibqpMu8T6+Oz8B1gOLzdKHBw7wdIh5DYdvptCHja9NlZ2CZaMXi+jdxNJx6jHy9ILSXZJu3kk3f0/WkDvoT192D7imjVJkvb/mmRHRjuLZA2Z293AEBJ+658HSx+H+2D70//gvmEkLFvZ+r/vee8mFmJ9pt2s6UYIH/T2681qHJeIO/aG68n31tcuWZO7S7aLtzCKonMjaXKwGWHny3y0KnzAajP/PvkWMfUp9Lh+AYc8dD5SpqfPzjnsN5h15G4mW0ZZ8lmc3t7JsXNN8rMJPU+MNKE7nPatJElO3sZxcaTx4diEDTplfMzZ/kQSJDk5bSobtT68QZwfZ9Z5Xt6Fnk2SkuTWsnhBVwu3Z8U0g0Nvk6pG4U15fPo7dFrRw/XQ6bLoAJi1rNaf7PSpE/0Kwl9nOman2Bsm3Wn1k2hziJlZTgcvmqqTqAHk5GtSj4PlfZPoVHHYvJYvisIXYGzyTOr7stUlxpEMao8GzKMCZN0a+QUY90hkPTrdmlfjzop8HbnUvwGYHSx11XPrUuOXeTd1znB6eM3K3/QjC4OcavvaTkSFko/XxRv2TFWr9ldNM7VHIxr0pRZ4/Kl6UNyqZfVv1alCbq/enS7a6gohy8q/YHVT5gl/sQv1xLeqcdipYh03chQjwa7viROtmWI4nGulsdWFugroZ5WPxmB8VlYKZxW+57miYzh9heeUhakyUzmpTKXuFTPfbb83krlQ4zlWRZv/X0WCZPDuKObqqOhUq5L5dFEIWr0qnlgSB3VAf+Wfp0qwmldWGlOryiHtJcEKV3ZJqIqBllyLc/kszpoSZPf1jeIhW6Xc47UiQac5BP3thqTISQntvlEkyJuVnvW+JEVmPDRPhi250yyC0cFdDUMbLm8wwQhFp2/2iB/h5/KvJq1BgCfXIjPaTO2El9skLapiI/1wYrAlVgwhbVxSPcRCakK8zRjJ90ObYuiTkOaad5HaRtEyOX6R13kNFpmjn4qZZiO1zV3ELEhmeHJ8p+Q1oNlhrwMrHmga9mKOskMmQZ5en1ALaKay/Cf2i5il6Ek1esv80PKFBHMc7JUwi5zr71374r2QTEs/Zs+nvgDBF9n3rIFIhdrVtooTUvjmfDkHa5x/vATBN10zR/Irhmtpan05R0nOlv5hTr5eEtMYPr4q+/dncL5056mYo7kK+MEQa4TMUMRwLGqqujud50lnhuQ5aw1iqCxFHX26koswNwTSJIatHej1HN0vIIyAM8j9XKMYtkRVcrELPhQCZ/l5yGYxXMilVZQ+7YuXURCmaxZDOfW6BVmVDqxCe1vwtQ1jOJbqI3+v1xYiLNr0NoyhdKXzZSM+VpzDbhrD1hGEQ3MshgteLG8Xfu3Tp0ln6Hrrzrq6MzB6DIegbPhP9oeEQ0o6hV+bydDd/7DHxtHig+LH6ECPYesOzlt2UMKF3STX2C9nzFJ3Ksv2uU26FeSGdBkKf5qfsj4iRJg3kwHpMlw40To0To7l43SaDKVnk5lCAgfWPmt8bSrDqZUs0y6fqNVlKBzOLAJzjAhTGfZInF8Aq+xq1GXY6oEQrXSbeMSIMI3hhKYRLJv/QjBcwQCcVMdmgRJhiqYZZRBsc6fcRlmbobIS07zTgY0RYYoMb5mntfQ2ppnQZ+jBS2YpW4wVbCo0c9kJGf6lLsJwnpZSqPoMWwcHpk3yd7+hms8J+USQkKEqQic4mKaUaJUTIoLhJkdO13CARbsmQJzhUFmF9LCYrRZLtQ6nzEpEMGz9gLpMRLKFntHVCvFZOpWmnobmYS1TQ6WyOxiGa+F4xnXNMpxTXd2aoLgMzyKKzH7h32TgVf6bATAMxf6P7KP/7sJYtHVCnKHUM0x+SGSwnMz0hwZQDGEuxX1rEG620xpHnKGYkaq13YG2KQwZ5AHFcAYDoVFZgZYl2nuBTIbqPJ+KKJ/2m0sBiqHQNVGTKPZNRHvTHtM0bgFDw2qJB3AMIU4R3QjDJE3q2EzEdWljGIodBlWDDLBeNPb2gMYyFFo9suLE/l/fMDeXIUxTWwnaQ2FKdhoyiQdDxT1oDkOhTZkcHfikuh5bgKcbTy1AO5ehv9U3R0BQ110O8A+MvtwGwsyliACgGzsnW8CwLDAuAxh9JoK+4NDwo/5TWq3vDIr1MNRNYAcYJuwFbAu6qIoU9yOdYh0MOaqEXlp3WIhiGeI2AO7SUqp6Chk++oAYVgw5uHr1Law6WIgQv9B3aEKMh2uACNRlMhxM18PRaDM0ALZycAILERy3cMORF+8vhAhz5ciQ3QbTzisKOWHZgfWDaLj21jANxQzbj248hFi33X5R7/HacTgYMDHglCJctiS0GIbfG3Si+9hOO/WVrUImO9zoC0VTZgIhGIbiDHor9WsSp/Czn7rzAIqmzDOxDIU4KbkOKhfnHlTNM5RxrUDRGDIU4qTktNsPKxMn2PxnFBP2rjh7H0cJhkKcvlH1TUoVynYV8WpAlWLc7pRnlmUoxcl+yosTvJrHjgQipXoJGQOGXKsDpsoz8H6cuy9O4zjyKVSmVuDEwKqkpV5bNkO+nW4tSpiNbIYZiNMJxGlS7/G/cPI8Tn3BTELUEKMYPqKL3uJ38GGldnYrEie1rvj1E3G1w0BiqV14IcPnZxZLu20ya7Pr2LMAtV2PyHc4Ze38UsQqGD5dYn/Wnr+QsxZ30qAllcsjmxBmxbrfL2L4+P1sPR3YhDipfFKATUBCqjQwiC6EiMvkTqSzq8nwgdniM6DINbqeYt8/DCeYmWNYk/viv8vAaH7530GsLX2Gz/IPfrqcOE3vDCnAP3BDcr/Cv/uR04sYlr0Ml75r2VUag2AZOoEa8TrTAbNyZi22RhBc0X9yxhIjgz86JkZlxPCB1WKXOWsZkmG4fwpkD8fwjE5E/yZ6Q5Zh+FSB/Ng7WSSuawtqshMIM1BBkSW44dTA45XHTCtk+Eg1euvpOWgKbizDc/h+HFe6pfhy0EtqfUklDB9YLS6CIlaGEF3z34yQIdotXVtpBCtkqB5QwsrwLuOHG1OG7le6GauSoTyri5XhXSYq4CEW1oX/TZ2jtTE0leFITAQLK8N2hifSMIaeMcNhUoT8cTanGQwHCsPQ4mPX4SUWoHAIPfYCHd2MdShSF57w2rDW4syj9HZrfwzf3aYwhOH5goPjNFiLT1R+0ES4OQyhqsa3FmJvgfPaxtIYsoEQf3MYQkm3v37d0HNGhtpmspmBMqI4w57vYFpKfvo3+FmpNf0LflbKI9b+z1SJTJszBE0fRJ/CfQZy9yQZqtVVcYajILU4jP2s9Ff3Yr+fBT8reVpjhpAGfuwrw8oFZEBYj2FZGFsLkV/z94dQiJFW+52DhjOEP3yU5Ye1s8iBNZwh7Jgeai6sPsHUQ7UazxDipY+SmjCqj0yuNZzhrxpfC5PcGocqVTSc4aeaBBaBGtQzGs4QDP7DjwHvhKDuAWk4Q1GY/0g3hcFTXClGsxmK0fHHj+FGA5flTmf4GRRLljvGFYEpQzAWYbopPJeISz6lM2y5PjCPKYCp1wZlX+F8gkNnKce9spHBsGKYyhBOAIWuqIi2YfbAzWZ4U1Wpkn3CFF82mqFIZsJfhcYDlUFsNENQNCJzH56e1Twe+8TLGWI0zTSqaOQxdcwxyJU8fVDjPQmGDEVpIph4kULELER5Vu1/iL9CwmyWinNBltCd4TFBlM0XRwtLlqnkwoyhWIbyjEZoPnQaZQlsZefB+prUmM3S7zBY7UjvChYiJmYqY96mFQAaMJPhNb4MlfJERK8VcTS6bK1RHowYit4O6mHnD3xdlGw9VbKfQB6MGIJTGjkCBFOOIubCQCxEp/qLe0IYMfyXVgMFqTLMkupIIdbWLNqEoeiNQSNb+rArH+KUbKsl02soJYyBiS4VkzR6nk+U7yOmqdJFgZUr+8uECUPYV8RiDaAZMbF9RdeIRhEVw2CWboQmjaWaQLQY71utVcjoW1QSBjKEJjyJ6Ci0WEJpfqVYodL7pQTwDF3QDiy+IQAzifJNZU/NoG9ZDbcS42ep6AOU9M/CbTDnmBEslWOkvOydNinAyxD0TEqbClCyuDzih1qvYJUrM06BbOujKUOpZ5I0IPSNO+7sRWrb6L3i7teyaCejB2UcS9E7IeeXuIS+uhT9VcyqvSlC3tGhVyMs/JnUunAQMHKrsI9IkdNllbtFuQ4drcfKfm2pJgFKUJBe5jQixXaXVLgapQy1TvSIKGJGwx+4vgrb8ShGsU0c87L/GMQmVC+7CZv7zMZbsDfG7vcmsVJaTvikmrkKp870TiMIET4qMNIA1hK9aV/Hb7PnjN6r0DmigZiWhherMNsyQ/yMYt2TkZM4KWFTvluUNB6yUaFOtFr2oM3ezIkWS+i+VW7ktuDwKV1i/Vw6xsckvZ1c4I5GUnIAbzkv1wvt6Q0csN9k+9knS+rc+gM8zh9UqWDVyKnIXtB5a1YIEdHvBjC6ZRR++76ujQePvDCN8AqEZwrEI0KNJkbtl8TqhqtDcY22aLZeEINfp8UatbH6tNDnYLVQnDmQAYeinr4/4RAdXBEYYDTAn/XVQPGtFdA0sHjgI7Depk2qNwOr+rlaGCCT14lahbl6EecwPtvt7VjcAyhLsEiEsi1X8ZUHIqvfZuZ1MeP90co/E4oCKzT34v4OLf9VXDOOaa+VwGxyJkTjgG8xOC1UCR05R7XGDPc9cV7OfV6te31CCOsGxs0MtuNP+MJQrLzeqOD2H4Dw7zQ/nwd31Jl8H7Y/fSOctsuJhov8Ixv8ato4EemlNZZZVAd50DP/hioV4l4y9CbjDZCRIsScmwkPSC888k4o9x9iBvsnLhko1VrpFTjKOyxRuv8gglYVVovWgYEsmMBV7rry4qfKwkp1QGoZOys2k4UR0oi+B/LOEI49+qW4Nu2G3lndipyXN5GDaJhg8HpeA+U6BrMwtLhbnV8bSXFU9m515eZq+6OBZtEThrDtmBYPymfYt8ZRnIlrK321bzw6eaGl0zSKKsEyTTvlxstu1locySlaslmgzA7a18pu+yuPjRImKWuvVZtaX89YJNZKa6Py9REyO8iR3bBrw1zJ5lmlOnY+cZF21WqEj3pRCVZxv6Ka46UVnrwzxV0tp6tAggGUHC85v9lqzG5KvLn81YqAuZLIc94a2FCzzZXqhbVMDvJ3hqd6kUK6SnX7UHl3dPCmmTrrqy1jeMX22eMyU9/lbzEbczWtxfqV+1juWb5Abu0qLmArxuqspphJwf3iZlAXAXu1GPeqALlVky6Yq4rMqrSArQCjk1p3ZbOSV7fmfBFXjFGXvcrDcXtUTdWRY43bHPdOI1/1kqna4eqFNrgrZwzwF1kP5Fx7HG5xjCSUX6DHI0apbdNlrRyH52gPWHp/xer/jZRbOFZ9HH1+kVy5wyrytIvg9SMVpQ491LI3XsT4cev+ukjKnEUqShzrVPWpoPH+GqvMIdeXmuDxZ7RQj5P2tEI/cZMoWHGsGg/FZwziFNUBnFnbTiW+3Gpyo7FyVdu6vyMOtr7F3rNN2HJdkuR4viUsXnFMzu/alM7b8eInh5Blx/h1e39bmqiL46T/zgjY3kkUePkkb5cF2myt1r1bkp7P71bfYXgtuHueLGILLor5uejf+uPNd0eaVkFl02M9Rzdx6JziigFYsp/e32KWszJdbzHZHYN7c9LqwxgZNCRC2xp9WnHtIGlS59/5czqZL4Yjz5vNVquZNxqu55Pp5/nIKGGp5ILpSS5NSj6PfQ2fc8eaw4Jb1vz/PRHc2siYk30PC2f0pwnTM4qhb6W1b1XJgy943ijxKVh/fpWtuPSld+3VtoWvAovelZqKMli1x9//QCmd97d0aJYCyWFnfew6jUrD5mK0/7z5ykXn7qrH1Z1f/e95gzKwmhhv5r0zCy5U6Tqcx0X6LAAm1OL3S8drWJUACuPRYj89/Nz8DTqhcL+v71xffSv5+zc0vx6veXDH45X3xGo8fh2x/wPS1C40g1jJTgAAAABJRU5ErkJggg=="
+                     src="/static/register.png"
                      width="128" height="128">
                 <h2>Registration</h2>
             </div>
@@ -110,15 +95,6 @@
 </div>
 
 
-<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-        crossorigin="anonymous"></script>
-<script src="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.js"></script>
+
 </body>
 </html>
