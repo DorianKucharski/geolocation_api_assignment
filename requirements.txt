@@ -1,0 +1,7 @@
+requests
+django
+djangorestframework
+djangorestframework-simplejwt
+validators
+psycopg2-binary
+psycopg2
